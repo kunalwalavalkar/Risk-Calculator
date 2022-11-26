@@ -66,19 +66,19 @@ var ctx = document.getElementById('myChart').getContext('2d');
       {
        s1.className = "";
        s1.classList.add('btn');
-       s1.classList.add('btn-success');
+       s1.classList.add('brightgreen');
       }
       else if(TA >= 3 && TA < 6)
       {
        s1.className = "";
        s1.classList.add("btn");
-       s1.classList.add('btn-warning');
+       s1.classList.add('brightyellow');
       }
       else
       {
        s1.className = "";
        s1.classList.add('btn');
-       s1.classList.add('btn-danger');
+       s1.classList.add('brightred');
       }
 
       
@@ -88,19 +88,19 @@ var ctx = document.getElementById('myChart').getContext('2d');
       {
        s2.className = "";
        s2.classList.add('btn');
-       s2.classList.add('btn-success');
+       s2.classList.add('brightgreen');
       }
       else if(VF >= 3 && VF < 6 )
       {
        s2.className = "";
        s2.classList.add("btn");
-       s2.classList.add('btn-warning');
+       s2.classList.add('brightyellow');
       }
       else
       {
        s2.className = "";
        s2.classList.add('btn');
-       s2.classList.add('btn-danger');
+       s2.classList.add('brightred');
       }
 
      var score_LS = 0;
@@ -110,21 +110,21 @@ var ctx = document.getElementById('myChart').getContext('2d');
      {
       s3.className = "";
       s3.classList.add('btn');
-      s3.classList.add('btn-success');
+      s3.classList.add('brightgreen');
       score_LS = 0;
      }
      else if(LS >= 3 && LS < 6 )
      {
       s3.className = "";
       s3.classList.add("btn");
-      s3.classList.add('btn-warning');
+      s3.classList.add('brightyellow');
       score_LS = 1;
      }
      else
      {
       s3.className = "";
       s3.classList.add('btn');
-      s3.classList.add('btn-danger');
+      s3.classList.add('brightred');
       score_LS = 2;
      }
      
@@ -153,19 +153,19 @@ var ctx = document.getElementById('myChart').getContext('2d');
       {
        s4.className = "";
        s4.classList.add('btn');
-       s4.classList.add('btn-success');
+       s4.classList.add('brightgreen');
       }
       else if(TI >= 3 && TI < 6 )
       {
        s4.className = "";
        s4.classList.add("btn");
-       s4.classList.add('btn-warning');
+       s4.classList.add('brightyellow');
       }
       else
       {
        s4.className = "";
        s4.classList.add('btn');
-       s4.classList.add('btn-danger');
+       s4.classList.add('brightred');
       }
 
 
@@ -175,44 +175,66 @@ var ctx = document.getElementById('myChart').getContext('2d');
       {
        s5.className = "";
        s5.classList.add('btn');
-       s5.classList.add('btn-success');
+       s5.classList.add('brightgreen');
       }
       else if(TI >= 3 && TI < 6 )
       {
        s5.className = "";
        s5.classList.add("btn");
-       s5.classList.add('btn-warning');
+       s5.classList.add('brightyellow');
       }
       else
       {
        s5.className = "";
        s5.classList.add('btn');
-       s5.classList.add('btn-danger');
+       s5.classList.add('brightred');
       }
 
 
       var s6 = document.getElementById('impact_score');
       s6.innerHTML = IS;
       var score_IS = 0;
-      if(IS < 3)
+      
+      if(IS < 2)
+      {
+       s6.className = "";
+       s6.classList.add('btn');
+       s6.classList.add('green');
+       score_IS = 2;
+     }
+      else if(IS >= 0 && IS < 3)
      {
       s6.className = "";
       s6.classList.add('btn');
-      s6.classList.add('btn-success');
+      s6.classList.add('brightgreen');
       score_IS = 2;
     }
-     else if(IS >= 3 && IS < 6 )
+     else if(IS >= 3 && IS < 5)
      {
       s6.className = "";
       s6.classList.add("btn");
-      s6.classList.add('btn-warning');
+      s6.classList.add('yellow');
       score_IS = 1;
      }
+      else if(IS >= 5 && IS < 7)
+     {
+      s6.className = "";
+      s6.classList.add("btn");
+      s6.classList.add('brightyellow');
+      score_IS = 1;
+     }
+     else if(IS >= 7 && IS < 9)
+     {
+        s6.className = "";
+        s6.classList.add("btn");
+        s6.classList.add('red');
+        score_IS = 1;
+       }
      else
      {
       s6.className = "";
       s6.classList.add('btn');
-      s6.classList.add('btn-danger');
+      s6.classList.add('brightred');
       score_IS = 0;
      }
 

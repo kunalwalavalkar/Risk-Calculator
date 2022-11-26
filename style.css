@@ -1,20 +1,85 @@
 body{
-	margin-top: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+	margin-top: 30px;
 	background-color: #161616;
+    font-family: 'Carme', sans-serif;
 }
 
-.container_top{
-	margin-top: 150px;
-	font-size: 5rem;
+.btn{
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 7px;
+    height: 40px;
+    border-color: #161616;
+    background-color: #161616;
+    color: #d3d3d3;
 }
 
-.ohornet{
-	font-family: 'VT323', monospace;
-	text-align: center;
-	font-size: 180px;
-	color: #d3d3d3;
-	margin-bottom:100px; 
-}	
+.green{
+    color: #161616;
+    background-color:rgba(138, 252, 138, 0.752);
+}
+
+.brightgreen{
+    color: #161616;
+    background-color: rgba(0, 128, 0, 0.801);
+}
+
+.yellow{
+    color: #161616;
+    background-color:rgba(249, 249, 113, 0.882);
+}
+
+.brightyellow{
+    color: #161616;
+    background-color:rgba(255, 255, 0, 0.504);
+}
+
+.red{
+    color: #161616;
+    background-color:rgba(254, 110, 134, 0.66);
+}
+
+.brightred{
+    color: #161616;
+    background-color:rgba(255, 0, 0, 0.762);
+}
+
+.drop{
+    border-color: #161616;
+    border-radius: 3px;
+    width: 90%;
+    height: 30px;
+}
+
+.attribute{
+    font-size: 17px;
+    color: #d3d3d3;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.container25{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #d3d3d3;
+    display: flexbox;
+    width: 50%;
+}
+
+.container50{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-flex;
+    width: 50%;
+}
+
+.container100{
+    margin-right: 60px;
+    display: inline-flex;
+    width: 100%;
+}
 
 .container_bottom{
 	text-align: center;
@@ -23,28 +88,45 @@ body{
 	margin-bottom:150px;
 }
 
-.container_threat{
-	color: #d3d3d3;
-	margin-top:50px; 
-	margin-bottom:2rem;
+.scorecontainer100{
+    display: flex;
 }
 
-.container_vulnerability{
-	color: #d3d3d3;
-	margin-top:50px; 
-	margin-bottom:2rem;
+.scorecontainer50{
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 650px;
+    color:#d3d3d3;
 }
 
-.container_technical{
-	color: #d3d3d3;
-	margin-top:48px; 
-	margin-bottom:2rem;
+.scorecontainerbottom{
+    color:#d3d3d3;
+    width: 650px;
+    margin-left: 425px;
+    text-align: center;
 }
 
-.container_business{
+.score25text{
+    font-size: 20px;
+}
+
+.score100text{
+    font-size:25px;
+}
+
+.score25{
 	color: #d3d3d3;
-	margin-top:52px; 
-	margin-bottom:2rem;
+	margin-top:10px;
+    margin-left: 20px;
+    width: 90%; 
+	margin-bottom:0px;
+}
+
+.score50{
+    display:block;
+	color: #d3d3d3;
+    width: 90%; 
+	margin-bottom:0px;
 }
 
 .col-8{
@@ -73,11 +155,11 @@ body{
 }
 
 #like_score, #impact_score, #threat_score, #vuln_score, #technical_score, #business_score{
-	color: #fff;
+	width: 100%;
+    color: #fff;
 	text-align: center;
 	align-content: center; 
 	display: flex;
-	margin: auto;
 	padding-left: 3rem;
 	padding-right: 3rem;
 }
