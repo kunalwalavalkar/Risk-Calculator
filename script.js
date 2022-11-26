@@ -110,21 +110,21 @@ var ctx = document.getElementById('myChart').getContext('2d');
      {
       s3.className = "";
       s3.classList.add('btn');
-      s3.classList.add('brightgreen');
+      s3.classList.add('green');
       score_LS = 0;
      }
      else if(LS >= 3 && LS < 6 )
      {
       s3.className = "";
       s3.classList.add("btn");
-      s3.classList.add('brightyellow');
+      s3.classList.add('yellow');
       score_LS = 1;
      }
      else
      {
       s3.className = "";
       s3.classList.add('btn');
-      s3.classList.add('brightred');
+      s3.classList.add('red');
       score_LS = 2;
      }
      
@@ -195,46 +195,25 @@ var ctx = document.getElementById('myChart').getContext('2d');
       s6.innerHTML = IS;
       var score_IS = 0;
       
-      if(IS < 2)
+      if(IS < 3)
       {
        s6.className = "";
        s6.classList.add('btn');
        s6.classList.add('green');
        score_IS = 2;
      }
-      else if(IS >= 0 && IS < 3)
+      else if(IS >= 3 && IS < 6)
      {
       s6.className = "";
       s6.classList.add('btn');
-      s6.classList.add('brightgreen');
+      s6.classList.add('yellow');
       score_IS = 2;
     }
-     else if(IS >= 3 && IS < 5)
-     {
-      s6.className = "";
-      s6.classList.add("btn");
-      s6.classList.add('yellow');
-      score_IS = 1;
-     }
-      else if(IS >= 5 && IS < 7)
-     {
-      s6.className = "";
-      s6.classList.add("btn");
-      s6.classList.add('brightyellow');
-      score_IS = 1;
-     }
-     else if(IS >= 7 && IS < 9)
-     {
-        s6.className = "";
-        s6.classList.add("btn");
-        s6.classList.add('red');
-        score_IS = 1;
-       }
      else
      {
       s6.className = "";
       s6.classList.add('btn');
-      s6.classList.add('brightred');
+      s6.classList.add('red');
       score_IS = 0;
      }
 
