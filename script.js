@@ -190,7 +190,7 @@ var ctx = document.getElementById('myChart').getContext('2d');
        s5.classList.add('brightred');
       }
 
-
+      var score_IS = 0;
       var s6 = document.getElementById('impact_score');
       s6.innerHTML = IS;
       var score_IS = 0;
