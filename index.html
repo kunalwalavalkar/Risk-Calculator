@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>OWASP RISK CALCULATOR</title>
+  <title>OHORNET</title>
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,17 +12,15 @@
 </head>
 
 <body>
-  <div class="ohornet">
-    OHORNET
-  </div>
+  
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6 topics">
         <h2>Threat Agent Factors</h2>
         <hr>
         <div class="row">
-          <div class="col-4">Skill Level</div>
-          <div class="col-8">
+          <div class="col-7">Skill Level</div>
+          <div class="col-5">
             <select id='sl' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- No Technical Skills</option>
@@ -38,8 +36,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4">Motive</div>
-          <div class="col-8">
+          <div class="col-7">Motive</div>
+          <div class="col-5">
             <select id='motive' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Low Or No Reward</option>
@@ -55,8 +53,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4">Opportunity</div>
-          <div class="col-8">
+          <div class="col-7">Opportunity</div>
+          <div class="col-5">
             <select id='oppor' class="form-control" onchange="calc_score()">
               <option value="0">0- Full Access/Expensive Resources Required</option>
               <option value="1">1- </option>
@@ -72,8 +70,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4">Size</div>
-          <div class="col-8">
+          <div class="col-7">Size</div>
+          <div class="col-5">
             <select id='size' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="2">1- </option>
@@ -92,7 +90,7 @@
           <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-              <h4>Threat Agent factor</h4>
+              <h4>Threat Agent<br>factor</h4>
             </div>
             <div class="col-2"></div>
           </div>
@@ -105,8 +103,8 @@
         <h2>Vulnerability Factors</h2>
         <hr>
         <div class="row">
-          <div class="col-4">Ease of Discovery</div>
-          <div class="col-8">
+          <div class="col-7">Ease of Discovery</div>
+          <div class="col-5">
             <select id='eod' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Practically impossible</option>
@@ -122,8 +120,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4">Ease of Exploit</div>
-          <div class="col-8">
+          <div class="col-7">Ease of Exploit</div>
+          <div class="col-5">
             <select id='eoe' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Theoretical</option>
@@ -139,8 +137,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4">Awareness</div>
-          <div class="col-8">
+          <div class="col-7">Awareness</div>
+          <div class="col-5">
             <select id='aware' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Unknown</option>
@@ -156,8 +154,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4">Intrusion Detection</div>
-          <div class="col-8">
+          <div class="col-7">Intrusion Detection</div>
+          <div class="col-5">
             <select id='intrude' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Active Detection In Application</option>
@@ -207,8 +205,8 @@
         <h2>Technical Impact Factors</h2>
         <hr>
         <div class="row">
-          <div class="col-5">Loss Of Confidentiality </div>
-          <div class="col-7">
+          <div class="col-7">Loss Of Confidentiality </div>
+          <div class="col-5">
             <select id='loc' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- </option>
@@ -224,8 +222,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5">Loss Of Integrity</div>
-          <div class="col-7">
+          <div class="col-7">Loss Of Integrity</div>
+          <div class="col-5">
             <select id='loi' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Minimal Slightly Corrupt Data</option>
@@ -241,8 +239,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5">Loss Of Availability</div>
-          <div class="col-7">
+          <div class="col-7">Loss Of Availability</div>
+          <div class="col-5">
             <select id='loa' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Minimal Secondary Services Interrupted</option>
@@ -258,8 +256,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5">Loss of Accountability</div>
-          <div class="col-7">
+          <div class="col-7">Loss of Accountability</div>
+          <div class="col-5">
             <select id='loacc' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Fully Traceable</option>
@@ -291,8 +289,8 @@
         <h2>Businesses Impact Factors</h2>
         <hr>
         <div class="row">
-          <div class="col-5">Financial damage</div>
-          <div class="col-7">
+          <div class="col-7">Financial damage</div>
+          <div class="col-5">
             <select id='finan' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Less Than The Cost To Fix The Vulnerability</option>
@@ -308,8 +306,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5">Reputation Damage</div>
-          <div class="col-7">
+          <div class="col-7">Reputation Damage</div>
+          <div class="col-5">
             <select id='reput' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- Minimal Damage</option>
@@ -325,8 +323,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5">Non-compliance</div>
-          <div class="col-7">
+          <div class="col-7">Non-compliance</div>
+          <div class="col-5">
             <select id='comply' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- </option>
@@ -342,8 +340,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5">Privacy violation</div>
-          <div class="col-7">
+          <div class="col-7">Privacy violation</div>
+          <div class="col-5">
             <select id='privacy' class="form-control" onchange="calc_score()">
               <option value="0">0- N/A </option>
               <option value="1">1- </option>
