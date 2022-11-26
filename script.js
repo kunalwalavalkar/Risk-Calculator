@@ -177,7 +177,7 @@ var ctx = document.getElementById('myChart').getContext('2d');
        s5.classList.add('btn');
        s5.classList.add('brightgreen');
       }
-      else if(TI >= 3 && TI < 6 )
+      else if(BI >= 3 && BI < 6 )
       {
        s5.className = "";
        s5.classList.add("btn");
