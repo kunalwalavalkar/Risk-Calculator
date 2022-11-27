@@ -247,8 +247,3 @@ function calc_score() {
   }
   updateChart(dataset);
 }
-
-function updateChart(dataset) {
-  myChart.data.datasets[0].data = dataset;
-  myChart.update();
-}
