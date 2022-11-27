@@ -1,151 +1,153 @@
-body{
-    margin-left: 50px;
-    margin-right: 50px;
+body {
+	margin-left: 50px;
+	margin-right: 50px;
 	margin-top: 30px;
 	background-color: #161616;
-    font-family: 'Carme', sans-serif;
+	font-family: "Carme", sans-serif;
 }
 
-.btn{
-    font-size: 2rem;
-    text-align: center;
-    border-radius: 7px;
-    height: 40px;
-    border-color: #161616;
-    background-color: #161616;
-    color: #d3d3d3;
+.btn {
+	font-size: 2rem;
+	text-align: center;
+	border-radius: 7px;
+	height: 40px;
+	border-color: #161616;
+	background-color: #161616;
+	color: #d3d3d3;
 }
 
-.green{
-    color: #161616;
-    background-color:rgba(138, 252, 138, 0.752);
+.green {
+	color: #161616;
+	background-color: rgba(138, 252, 138, 0.752);
 }
 
-.brightgreen{
-    color: #161616;
-    background-color: rgba(0, 128, 0, 0.801);
+.brightgreen {
+	color: #161616;
+	background-color: rgba(0, 128, 0, 0.801);
 }
 
-.yellow{
-    color: #161616;
-    background-color:rgba(251, 251, 92, 0.882);
+.yellow {
+	color: #161616;
+	background-color: rgba(251, 251, 92, 0.882);
 }
 
-.brightyellow{
-    color: #161616;
-    background-color:rgba(255, 255, 0, 0.504);
+.brightyellow {
+	color: #161616;
+	background-color: rgba(255, 255, 0, 0.504);
 }
 
-.red{
-    color: #161616;
-    background-color:rgba(254, 110, 134, 0.66);
+.red {
+	color: #161616;
+	background-color: rgba(254, 110, 134, 0.66);
 }
 
-.brightred{
-    color: #161616;
-    background-color:rgba(255, 0, 0, 0.762);
+.brightred {
+	color: #161616;
+	background-color: rgba(255, 0, 0, 0.762);
 }
 
-.drop{
-    border-color: #161616;
-    border-radius: 3px;
-    width: 90%;
-    height: 30px;
+.drop {
+	border-color: #161616;
+	border-radius: 3px;
+	margin-left: 20px;
+	width: 90%;
+	height: 30px;
 }
 
-.attribute{
-    font-size: 17px;
-    color: #d3d3d3;
-    margin-top: 20px;
-    margin-bottom: 5px;
+.attribute {
+	font-size: 17px;
+	color: #d3d3d3;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 5px;
 }
 
-.container25{
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #d3d3d3;
-    display: flexbox;
-    width: 50%;
+.container25 {
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #d3d3d3;
+	display: flexbox;
+	width: 50%;
 }
 
-.container50{
-    margin-left: 10px;
-    margin-right: 10px;
-    display: inline-flex;
-    width: 50%;
+.container50 {
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-flex;
+	width: 50%;
 }
 
-.container100{
-    margin-right: 60px;
-    display: inline-flex;
-    width: 100%;
+.container100 {
+	margin-right: 60px;
+	display: inline-flex;
+	width: 100%;
 }
 
-.container_bottom{
+.container_bottom {
 	text-align: center;
 	color: #d3d3d3;
-	margin-top:20px; 
-	margin-bottom:150px;
+	margin-top: 20px;
+	margin-bottom: 150px;
 }
 
-.scorecontainer100{
-    display: flex;
+.scorecontainer100 {
+	display: flex;
 }
 
-.scorecontainer50{
-    margin-left: 100px;
-    margin-right: 100px;
-    width: 650px;
-    color:#d3d3d3;
-}
-
-.scorecontainerbottom{
-    color:#d3d3d3;
-    width: 650px;
-    margin-left: 390px;
-    text-align: center;
-}
-
-.score25text{
-    font-size: 20px;
-}
-
-.score100text{
-    font-size:25px;
-}
-
-.score25{
+.scorecontainer50 {
+	margin-left: 100px;
+	margin-right: 100px;
+	width: 650px;
 	color: #d3d3d3;
-	margin-top:10px;
-    margin-left: 20px;
-    width: 90%; 
-	margin-bottom:0px;
 }
 
-.score50{
-    display:block;
+.scorecontainerbottom {
 	color: #d3d3d3;
-    width: 90%; 
-	margin-bottom:0px;
-}
-
-.col-8{
+	width: 650px;
+	margin-left: 390px;
 	text-align: center;
 }
 
-.topics{
+.score25text {
+	font-size: 20px;
+}
+
+.score100text {
+	font-size: 25px;
+}
+
+.score25 {
+	color: #d3d3d3;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 90%;
+	margin-bottom: 0px;
+}
+
+.score50 {
+	display: block;
+	color: #d3d3d3;
+	width: 90%;
+	margin-bottom: 0px;
+}
+
+.col-8 {
+	text-align: center;
+}
+
+.topics {
 	color: #d3d3d3;
 }
 
-.form-control{
+.form-control {
 	color: #d3d3d3;
 	background-color: #414141;
 }
 
-#overall_score{
+#overall_score {
 	color: #fff;
 	text-align: center;
-	align-content: center; 
+	align-content: center;
 	display: flex;
 	margin: auto;
 	margin-bottom: 50px;
@@ -154,11 +156,16 @@ body{
 	font-size: 2rem;
 }
 
-#like_score, #impact_score, #threat_score, #vuln_score, #technical_score, #business_score{
+#like_score,
+#impact_score,
+#threat_score,
+#vuln_score,
+#technical_score,
+#business_score {
 	width: 100%;
-    color: #fff;
+	color: #fff;
 	text-align: center;
-	align-content: center; 
+	align-content: center;
 	display: flex;
 	padding-left: 3rem;
 	padding-right: 3rem;
