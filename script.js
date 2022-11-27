@@ -4,7 +4,7 @@ var myChart = new Chart(ctx, {
 	data: {
 		labels: [
 			"Threat Agent",
-			"Vlunerability Factors",
+			"Vulnerability Factors",
 			"Technical Impact",
 			"Business Impact"
 		],
