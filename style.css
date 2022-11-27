@@ -74,7 +74,7 @@ body {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: inline-flex;
-	width: 50%;
+	width: 700px;
 }
 
 .container100 {
@@ -95,9 +95,9 @@ body {
 }
 
 .scorecontainer50 {
-	margin-left: 100px;
+	margin-left: 60px;
 	margin-right: 100px;
-	width: 650px;
+	width: 600px;
 	color: #d3d3d3;
 }
 
@@ -142,6 +142,10 @@ body {
 .form-control {
 	color: #d3d3d3;
 	background-color: #414141;
+}
+
+.noFlexContainer{
+	width: 50%;
 }
 
 #overall_score {
