@@ -2,7 +2,7 @@ body {
 	margin-top: 50px;
 	margin-left: 50px;
 	margin-right: 50px;
-	background-color: #0f0f0f;
+	background-color: #1b1c1e;
 	font-family: "Inconsolata", monospace;
 	text-shadow: 0 0 4px #d3d3d3;
   }
@@ -28,7 +28,7 @@ body {
 	text-align: center;
 	border-radius: 7px;
 	height: 40px;
-	border-color: #0f0f0f;
+	border-color: #1b1c1e;
 	background-color: #777777;
 	color: #d3d3d3;
   }
