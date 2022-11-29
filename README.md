@@ -1,4 +1,4 @@
-<h1>OHORNET</h1>
+<h1>Risk Calculator</h1>
 
 An [OWASP risk calculator](https://www.owasp-risk-rating.com/) clone
 <br>
