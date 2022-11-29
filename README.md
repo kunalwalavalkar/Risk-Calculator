@@ -5,7 +5,7 @@ An [OWASP risk calculator](https://www.owasp-risk-rating.com/) clone
 <br>
 <h2>Preview</h2>
 
-![risk](https://user-images.githubusercontent.com/110326359/204508474-a3a05a2d-4ddf-4720-b4a1-ecd9e918932d.png)
-![risk2](https://user-images.githubusercontent.com/110326359/204508500-7bd604c8-76a9-44e2-bd57-9d70a9c53575.png)
+![risk](https://user-images.githubusercontent.com/110326359/204522660-c177133b-d852-46ab-9295-f7ba4f3c414f.png)
+![risk2](https://user-images.githubusercontent.com/110326359/204522704-218658a4-538e-4048-a05a-49237b613988.png)
 
 
