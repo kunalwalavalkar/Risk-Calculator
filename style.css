@@ -1,12 +1,12 @@
 .hero {
-	font-size: clamp(40px, 10vw, 100px);
+	font-size: clamp(50px, 5vw, 100px);
 	line-height: 1;
 	margin-left: 20px;
 	color: #d3d3d3;
 	/* Bright things in dark environments usually cast that light, giving off a glow */
 	filter: drop-shadow(0 1px 3px);
   }
-
+  
   .layers {
 	position: relative;
   }
@@ -22,15 +22,15 @@
   .layers::before {
 	top: 10px;
 	left: 15px;
-	color: #e0287d;
+	color: #fca5ce;
   }
   
   .layers::after {
 	top: 5px;
 	left: -10px;
-	color: #1bc7fb;
+	color: #9bdff4;
   }
-
+  
   .single-path {
 	clip-path: polygon(
 	  0% 12%,
@@ -464,37 +464,11 @@
   
   .hero-container {
 	position: relative;
-	
+  
 	text-align: left;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes flicker {
+  
+  @keyframes flicker {
 	0% {
 	  opacity: 0.27861;
 	}
@@ -645,6 +619,7 @@
 		-2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
 	}
   }
+  
   body::after {
 	content: " ";
 	display: block;
@@ -660,6 +635,7 @@
 	animation: flicker 0.15s infinite;
 	height: 150%;
   }
+  
   body::before {
 	content: " ";
 	display: block;
@@ -986,4 +962,4 @@
 	#header {
 	  font-size: 8px;
 	}
-  }
+  }  
