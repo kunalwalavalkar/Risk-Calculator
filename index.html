@@ -2,386 +2,381 @@
 <html>
 
 <head>
-  <title>Risk Calculator</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
+	<title>Risk Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-  <div class="crt">
-    <div class="hero-container">
-      <div class="environment"></div>
-      <h2 class="hero glitch layers" data-text="RISK CALCULATOR"><span>RISK CALCULATOR</span></h2>
-    </div>
-  </div>
-  <div class="container100">
-    <div class="noFlexContainer">
-      <div class="container50">
-        <div class="container25">
-          <h2>THREAT AGENT<br>FACTORS</h2>
-          <hr>
-          <div class="row">
-            <div class="attribute">SKILL LEVEL</div>
-            <div class="list">
-              <select id='sl' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- No Technical Skills</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- Some Technical Skills</option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- Advanced Computer User</option>
-                <option class="yellow" value="6">6- Network And Programming Skills</option>
-                <option class="red" value="7">7- </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Security Penetration Skills</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">MOTIVE</div>
-            <div class="list">
-              <select id='motive' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Low Or No Reward</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- Possible Reward </option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- High Reward </option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">OPPORTUNITY</div>
-            <div class="list">
-              <select id='oppor' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- Full Access/Expensive Resources Required</option>
-                <option class="green" value="1">1- </option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- Special Access Or Resources Required</option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- Some Access Or Resources Required </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- No Access Or Resources Required</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">SIZE</div>
-            <div class="list">
-              <select id='size' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="2">1- </option>
-                <option class="green" value="2">2- Developers or System Administrators</option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- Intranet Users</option>
-                <option class="yellow" value="5">5- Partners</option>
-                <option class="yellow" value="6">6- Authenticated Users </option>
-                <option class="red" value="7">7- </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Anonymous Internet Users</option>
-              </select>
-            </div>
-          </div>
-          <div class="score25">
-            <div class="row">
-              <div class="score25text">
-                <h4>THREAT AGENT SCORE</h4>
-              </div>
-            </div>
-            <div>
-              <button type="button" id="threat_score" class="btn"> 0</button>
-            </div>
-          </div>
-        </div>
-        <div class="container25">
-          <h2>VULNERABILITY<br>FACTORS</h2>
-          <hr>
-          <div class="row">
-            <div class="attribute">EASE OF DISCOVERY</div>
-            <div class="list">
-              <select id='eod' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Practically impossible</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- Difficult</option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- Easy</option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Automated Tools available</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">EASE OF EXPLOIT</div>
-            <div class="list">
-              <select id='eoe' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Theoretical</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- Difficult</option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- Easy</option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Automated Tools available</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">AWARENESS</div>
-            <div class="list">
-              <select id='aware' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Unknown</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- Hidden</option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- Obvious</option>
-                <option class="red" value="7">7- </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Public Knowledge</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">INTRUSION DETECTION</div>
-            <div class="list">
-              <select id='intrude' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Active Detection In Application</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- Logged And Reviewed</option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- </option>
-                <option class="red" value="8">8- Logged Without Review</option>
-                <option class="red" value="9">9- Not Logged</option>
-              </select>
-            </div>
-          </div>
-          <div class="score25">
-            <div class="row">
-              <div class="score25text">
-                <h4>VULNERABITITY SCORE</h4>
-              </div>
-            </div>
-            <div>
-              <button type="button" id="vuln_score" class="btn btn-link"> 0</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="scorecontainer50">
-        <div class="score25text">
-          <h4>LIKELIHOOD SCORE</h4>
-        </div>
-        <div>
-          <button type="button" id="like_score" class="btn"> 0</button>
-        </div>
-      </div>
-    </div>
-    <div class="" noFlexContainer>
-      <div class="container50">
-        <div class="container25">
-          <h2>TECHNICAL IMPACT<br>FACTORS</h2>
-          <hr>
-          <div class="row">
-            <div class="attribute">LOSS OF CONFIDENTIALITY</div>
-            <div class="list">
-              <select id='loc' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- </option>
-                <option class="green" value="2">2- Minimal non-sensitive data disclosed</option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- Minimal critical data disclosed or Extensive non-sensitive data disclosed</option>
-                <option class="red" value="7">7- Extensive critical data disclosed </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">All Data Disclosed</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">LOSS OF INTEGRITY</div>
-            <div class="list">
-              <select id='loi' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Minimal Slightly Corrupt Data</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- Minimal Seriously Corrupt Data</option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- Extensive Slightly Corrupt Data</option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- Extensive Seriously Corrupt Data</option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- All Data Totally Corrupt</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">LOSS OF AVAILABILITY</div>
-            <div class="list">
-              <select id='loa' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Minimal Secondary Services Interrupted</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- Minimal Primary or Extensive Secondary Services Interrupted</option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- Extensive Primary Services Interrupted </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- All Services Completely Lost</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">LOSS OF ACCOUNTABILITY</div>
-            <div class="list">
-              <select id='loacc' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Fully Traceable</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- Possibly Traceable</option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">8- Completely Anonymous</option>
-              </select>
-            </div>
-          </div>
-          <div class="score25">
-            <div class="row">
-              <div class="score25text">
-                <h4>TECNICAL IMPACT SCORE</h4>
-              </div>
-            </div>
-            <div>
-              <button type="button" id="technical_score" class="btn"> 0</button>
-            </div>
-          </div>
-        </div>
-        <div class="container25">
-          <h2>BUSINESS IMPACT<br>FACTORS</h2>
-          <hr>
-          <div class="row">
-            <div class="attribute">FINANCIAL DAMAGE</div>
-            <div class="list">
-              <select id='finan' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Less Than The Cost To Fix The Vulnerability</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- Minor Effect On Annual Profit</option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- </option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- Significant Effect On Annual Profit</option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Bankruptcy</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">REPUTATION DAMAGE</div>
-            <div class="list">
-              <select id='reput' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- Minimal Damage</option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- Loss Of Major Accounts</option>
-                <option class="yellow" value="5">5- Loss Of Goodwill</option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- </option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Brand Damage</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">NON-COMPLIANCE</div>
-            <div class="list">
-              <select id='comply' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- </option>
-                <option class="green" value="2">2- Minor Violation </option>
-                <option class="green" value="3">3- </option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- Clear Violation</option>
-                <option class="yellow" value="6">8- </option>
-                <option class="red" value="7">7- High Profile Violation</option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- </option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="attribute">PRIVACY VIOLATION</div>
-            <div class="list">
-              <select id='privacy' class="drop form-control" onchange="calc_score()">
-                <option class="green" value="0">0- N/A </option>
-                <option class="green" value="1">1- </option>
-                <option class="green" value="2">2- </option>
-                <option class="green" value="3">3- One Individual</option>
-                <option class="yellow" value="4">4- </option>
-                <option class="yellow" value="5">5- Hundreds Of People </option>
-                <option class="yellow" value="6">6- </option>
-                <option class="red" value="7">7- Thousands Of People</option>
-                <option class="red" value="8">8- </option>
-                <option class="red" value="9">9- Millions Of People</option>
-              </select>
-            </div>
-          </div>
-          <div class="score25">
-            <div class="row">
-              <div class="score25text">
-                <h4>BUSINESS IMPACT SCORE</h4>
-              </div>
-            </div>
-            <div>
-              <button type="button" id="business_score" class="btn"> 0</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="scorecontainer50">
-        <div class="score25text">
-          <h4>IMPACT SCORE</h4>
-        </div>
-        <div>
-          <button type="button" id="impact_score" class="btn"> 0</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="resconsiveScore">
-    <div class="scorecontainerbottom">
-      <div class="row">
-        <div class="score100text">
-          <h4>OVERALL RISK SCORE</h4>
-        </div>
-      </div>
-      <div>
-        <button type="button" id="overall_score" class="btn"> 0</button>
-      </div>
-    </div>
-  </div>
-
-  </div>
+	<div class="scan-bar">
+		<div class="scan"></div>
+	</div>
+	<div class="crt">
+		<div class="hero-container">
+			<div class="environment"></div>
+			<h2 class="hero glitch layers" data-text="RISK CALCULATOR">
+          <div>RISK CALCULATOR</div>
+        </h2> </div>
+	</div>
+	<div class="container100">
+		<div class="noFlexContainer">
+			<div class="container50">
+				<div class="container25">
+					<h2>THREAT AGENT <br>FACTORS </h2>
+					<hr>
+					<div class="row">
+						<div class="attribute">SKILL LEVEL</div>
+						<div class="list">
+							<select id='sl' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- No Technical Skills</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- Some Technical Skills</option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- Advanced Computer User</option>
+								<option class="yellow" value="6">6- Network And Programming Skills</option>
+								<option class="red" value="7">7- </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Security Penetration Skills</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">MOTIVE</div>
+						<div class="list">
+							<select id='motive' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Low Or No Reward</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- Possible Reward </option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- High Reward </option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">OPPORTUNITY</div>
+						<div class="list">
+							<select id='oppor' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- Full Access/Expensive Resources Required</option>
+								<option class="green" value="1">1- </option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- Special Access Or Resources Required</option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- Some Access Or Resources Required </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- No Access Or Resources Required</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">SIZE</div>
+						<div class="list">
+							<select id='size' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="2">1- </option>
+								<option class="green" value="2">2- Developers or System Administrators</option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- Intranet Users</option>
+								<option class="yellow" value="5">5- Partners</option>
+								<option class="yellow" value="6">6- Authenticated Users </option>
+								<option class="red" value="7">7- </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Anonymous Internet Users</option>
+							</select>
+						</div>
+					</div>
+					<div class="score25">
+						<div class="row">
+							<div class="score25text">
+								<h4>THREAT AGENT SCORE</h4> </div>
+						</div>
+						<div>
+							<button type="button" id="threat_score" class="btn"> 0</button>
+						</div>
+					</div>
+				</div>
+				<div class="container25">
+					<h2>VULNERABILITY <br>FACTORS </h2>
+					<hr>
+					<div class="row">
+						<div class="attribute">EASE OF DISCOVERY</div>
+						<div class="list">
+							<select id='eod' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Practically impossible</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- Difficult</option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- Easy</option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Automated Tools available</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">EASE OF EXPLOIT</div>
+						<div class="list">
+							<select id='eoe' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Theoretical</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- Difficult</option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- Easy</option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Automated Tools available</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">AWARENESS</div>
+						<div class="list">
+							<select id='aware' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Unknown</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- Hidden</option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- Obvious</option>
+								<option class="red" value="7">7- </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Public Knowledge</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">INTRUSION DETECTION</div>
+						<div class="list">
+							<select id='intrude' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Active Detection In Application</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- Logged And Reviewed</option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- </option>
+								<option class="red" value="8">8- Logged Without Review</option>
+								<option class="red" value="9">9- Not Logged</option>
+							</select>
+						</div>
+					</div>
+					<div class="score25">
+						<div class="row">
+							<div class="score25text">
+								<h4>VULNERABITITY SCORE</h4> </div>
+						</div>
+						<div>
+							<button type="button" id="vuln_score" class="btn btn-link"> 0</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scorecontainer50">
+				<div class="score25text">
+					<h4>LIKELIHOOD SCORE</h4> </div>
+				<div>
+					<button type="button" id="like_score" class="btn"> 0</button>
+				</div>
+			</div>
+		</div>
+		<div class="" noFlexContainer>
+			<div class="container50">
+				<div class="container25">
+					<h2>TECHNICAL IMPACT <br>FACTORS </h2>
+					<hr>
+					<div class="row">
+						<div class="attribute">LOSS OF CONFIDENTIALITY</div>
+						<div class="list">
+							<select id='loc' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- </option>
+								<option class="green" value="2">2- Minimal non-sensitive data disclosed</option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- Minimal critical data disclosed or Extensive non-sensitive data disclosed</option>
+								<option class="red" value="7">7- Extensive critical data disclosed </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">All Data Disclosed</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">LOSS OF INTEGRITY</div>
+						<div class="list">
+							<select id='loi' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Minimal Slightly Corrupt Data</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- Minimal Seriously Corrupt Data</option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- Extensive Slightly Corrupt Data</option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- Extensive Seriously Corrupt Data</option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- All Data Totally Corrupt</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">LOSS OF AVAILABILITY</div>
+						<div class="list">
+							<select id='loa' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Minimal Secondary Services Interrupted</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- Minimal Primary or Extensive Secondary Services Interrupted</option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- Extensive Primary Services Interrupted </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- All Services Completely Lost</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">LOSS OF ACCOUNTABILITY</div>
+						<div class="list">
+							<select id='loacc' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Fully Traceable</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- Possibly Traceable</option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">8- Completely Anonymous</option>
+							</select>
+						</div>
+					</div>
+					<div class="score25">
+						<div class="row">
+							<div class="score25text">
+								<h4>TECNICAL IMPACT SCORE</h4> </div>
+						</div>
+						<div>
+							<button type="button" id="technical_score" class="btn"> 0</button>
+						</div>
+					</div>
+				</div>
+				<div class="container25">
+					<h2>BUSINESS IMPACT <br>FACTORS </h2>
+					<hr>
+					<div class="row">
+						<div class="attribute">FINANCIAL DAMAGE</div>
+						<div class="list">
+							<select id='finan' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Less Than The Cost To Fix The Vulnerability</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- Minor Effect On Annual Profit</option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- </option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- Significant Effect On Annual Profit</option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Bankruptcy</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">REPUTATION DAMAGE</div>
+						<div class="list">
+							<select id='reput' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- Minimal Damage</option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- Loss Of Major Accounts</option>
+								<option class="yellow" value="5">5- Loss Of Goodwill</option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- </option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Brand Damage</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">NON-COMPLIANCE</div>
+						<div class="list">
+							<select id='comply' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- </option>
+								<option class="green" value="2">2- Minor Violation </option>
+								<option class="green" value="3">3- </option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- Clear Violation</option>
+								<option class="yellow" value="6">8- </option>
+								<option class="red" value="7">7- High Profile Violation</option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- </option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="attribute">PRIVACY VIOLATION</div>
+						<div class="list">
+							<select id='privacy' class="drop form-control" onchange="calc_score()">
+								<option class="green" value="0">0- N/A </option>
+								<option class="green" value="1">1- </option>
+								<option class="green" value="2">2- </option>
+								<option class="green" value="3">3- One Individual</option>
+								<option class="yellow" value="4">4- </option>
+								<option class="yellow" value="5">5- Hundreds Of People </option>
+								<option class="yellow" value="6">6- </option>
+								<option class="red" value="7">7- Thousands Of People</option>
+								<option class="red" value="8">8- </option>
+								<option class="red" value="9">9- Millions Of People</option>
+							</select>
+						</div>
+					</div>
+					<div class="score25">
+						<div class="row">
+							<div class="score25text">
+								<h4>BUSINESS IMPACT SCORE</h4> </div>
+						</div>
+						<div>
+							<button type="button" id="business_score" class="btn"> 0</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scorecontainer50">
+				<div class="score25text">
+					<h4>IMPACT SCORE</h4> </div>
+				<div>
+					<button type="button" id="impact_score" class="btn"> 0</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="responsiveScore">
+		<div class="scorecontainerbottom">
+			<div class="row">
+				<div class="score100text">
+					<h4>OVERALL RISK SCORE</h4> </div>
+			</div>
+			<div>
+				<button type="button" id="overall_score" class="btn"> 0</button>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
