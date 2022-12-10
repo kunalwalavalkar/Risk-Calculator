@@ -1,7 +1,7 @@
 .hero {
 	font-size: 40px;
 	line-height: 1;
-	color: #d3d3d3;
+	color: #fff;
 	/* Bright things in dark environments usually cast that light, giving off a glow */
 	filter: drop-shadow(0 1px 3px);
 }
@@ -470,6 +470,13 @@
 	margin-bottom: 85px;
 }
 
+.previous {
+	align-items: center;
+	display: flex;
+	position: relative;
+	text-align: left;
+}
+
 @keyframes flicker {
 	0% {
 		opacity: 0.27861;
@@ -727,7 +734,7 @@ h1 {
 	height: 40px;
 	border-color: #1b1c1e;
 	background-color: #777777;
-	color: #d3d3d3;
+	color: #fff;
 }
 
 .green {
@@ -790,7 +797,7 @@ h1 {
 .container25 {
 	margin-left: 10px;
 	margin-right: 10px;
-	color: #d3d3d3;
+	color: #fff;
 	display: block;
 	width: 50%;
 }
@@ -819,7 +826,7 @@ h1 {
 .scorecontainer50 {
 	width: 75%;
 	margin: auto;
-	color: #d3d3d3;
+	color: #fff;
 }
 
 .responsiveScore {
@@ -828,7 +835,7 @@ h1 {
 }
 
 .scorecontainerbottom {
-	color: #d3d3d3;
+	color: #fff;
 	width: 50%;
 	margin: auto;
 	justify-content: center;
@@ -844,7 +851,7 @@ h1 {
 }
 
 .score25 {
-	color: #d3d3d3;
+	color: #fff;
 	margin-top: 10px;
 	margin-left: 20px;
 	width: 90%;
@@ -853,7 +860,7 @@ h1 {
 
 .score50 {
 	display: block;
-	color: #d3d3d3;
+	color: #fff;
 	width: 90%;
 	margin-bottom: 0px;
 }
@@ -900,7 +907,7 @@ h1 {
 a {
 	text-decoration: none;
 	width: 100%;
-	color: #d3d3d3;
+	color: #fff;
 }
 
 @font-face {
@@ -914,11 +921,11 @@ a {
 
 @media only screen and (max-width: 1500px) {
 	body::before {
-		height: 250%;
+		height: 230%;
 	}
 
 	body::after {
-		height: 250%;
+		height: 230%;
 	}
 
 	.container100 {
@@ -957,6 +964,15 @@ a {
 }
 
 @media only screen and (max-width: 815px) {
+	
+	.hero-container{
+		display: block;
+	}
+
+	.hero {
+		margin-top: 0;
+	}
+
 	body::before {
 		height: 350%;
 	}
