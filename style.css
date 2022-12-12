@@ -1,7 +1,7 @@
 .hero {
-	font-size: 40px;
+	font-size: 2.5vw;
 	line-height: 1;
-	color: #fff;
+	color: #9b9b9b;
 	/* Bright things in dark environments usually cast that light, giving off a glow */
 	filter: drop-shadow(0 1px 3px);
 }
@@ -467,15 +467,16 @@
 	position: relative;
 	width: 100%;
 	text-align: left;
-	margin-bottom: 85px;
+	margin-bottom: 135px;
 }
 
 .previous {
+	font-size: 1.5vw;
 	align-items: center;
 	display: flex;
 	position: relative;
 	text-align: left;
-}
+} 
 
 @keyframes flicker {
 	0% {
@@ -709,9 +710,10 @@ body::before {
 
 body {
 	margin-top: 50px;
-	margin-left: 100px;
-	margin-right: 100px;
-	background-color: #1b1c1e;
+	margin-left: 10%;
+	margin-right: 10%;
+	background: rgb(0,0,0);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 50%, rgba(0,0,0,1) 100%);
 	font-family: "VCR", monospace;
 	animation: textShadow 1.6s infinite;
 }
@@ -721,7 +723,7 @@ h1 {
 }
 
 ::selection {
-	background: #777777;
+	background: #9b9b9b;
 	color: #0f0f0f;
 	text-shadow: none;
 }
@@ -905,18 +907,34 @@ h1 {
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 	width: 100%;
 	color: #fff;
 }
 
+.clickable:hover {
+	background-color: #777777;
+}
+
+.slash {
+	color: #777777;
+}
+
+.pages {
+	font-size: 4.5vw;
+    text-decoration: none;
+	width: 100%;
+	color: #fff;
+}
+
+
 @font-face {
 	font-family: 'VCR';
-    src: url('../VCR.eot'); /* IE9 Compat Modes */
-    src: url('../VCR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../VCR.woff') format('woff'), /* Modern Browsers */
-         url('../VCR.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('../VCR.svg#svgFontName') format('svg'); /* Legacy iOS */;
+    src: url('../../VCR.eot'); /* IE9 Compat Modes */
+    src: url('../../VCR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../VCR.woff') format('woff'), /* Modern Browsers */
+         url('../../VCR.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../../VCR.svg#svgFontName') format('svg'); /* Legacy iOS */;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -1013,32 +1031,5 @@ a {
 		margin: auto;
 		justify-content: center;
 		text-align: center;
-	}
-}
-
-.scan {
-	height: 20px;
-	width: 100%;
-	background-color: #262626;
-}
-
-.scan-bar {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	margin-left: -100px;
-	top: 0;
-	z-index: -1;
-	animation: scan 3s infinite;
-}
-
-@keyframes scan {
-	0% {
-		transform: translateY(0%);
-	}
-
-	100% {
-		transform: translateY(250px);
-		opacity: 0;
 	}
 }
