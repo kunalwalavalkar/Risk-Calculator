@@ -1,6 +1,6 @@
 <h1>Risk Calculator</h1>
 
-An [OWASP risk calculator](https://www.owasp-risk-rating.com/) clone
+An OWASP risk calculator clone
 <br>
 <br>
 
