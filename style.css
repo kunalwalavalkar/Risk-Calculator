@@ -283,11 +283,11 @@ a {
 
 @font-face {
 	font-family: 'VCR';
-    src: url('../../VCR.eot'); /* IE9 Compat Modes */
-    src: url('../../VCR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../../VCR.woff') format('woff'), /* Modern Browsers */
-         url('../../VCR.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('../../VCR.svg#svgFontName') format('svg'); /* Legacy iOS */;
+    src: url('VCR.eot'); /* IE9 Compat Modes */
+    src: url('VCR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('VCR.woff') format('woff'), /* Modern Browsers */
+         url('VCR.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('VCR.svg#svgFontName') format('svg'); /* Legacy iOS */;
 }
 
 @media only screen and (max-width: 1500px) {
