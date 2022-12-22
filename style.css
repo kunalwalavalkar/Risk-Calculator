@@ -334,7 +334,7 @@ a {
 	}
 }
 
-@media only screen and (max-width: 815px) {
+@media only screen and (max-width: 1300px) {
 
 	body::before {
 		height: 360%;
