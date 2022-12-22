@@ -290,7 +290,7 @@ a {
          url('VCR.svg#svgFontName') format('svg'); /* Legacy iOS */;
 }
 
-@media only screen and (max-width: 1500px) {
+/* @media only screen and (max-width: 1500px) {
 	body::before {
 		height: 230%;
 	}
@@ -332,9 +332,9 @@ a {
 		justify-content: center;
 		text-align: center;
 	}
-}
+} */
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1500px) {
 
 	body::before {
 		height: 360%;
