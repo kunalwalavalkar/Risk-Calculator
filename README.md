@@ -5,5 +5,4 @@ An OWASP risk calculator clone
 <br>
 
 <h2>Live Preview</h2>
-https://kunalwalavalkar.github.io/riskcalculator/
-
+https://kunalwalavalkar.github.io/Risk-Calculator/
